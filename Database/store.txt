@@ -1,0 +1,85 @@
+Items:
+CREATE TABLE `items` (
+ `id` int(11) NOT NULL AUTO_INCREMENT,
+ `name` varchar(255) NOT NULL,
+ `price` int(11) NOT NULL,
+ PRIMARY KEY (`id`)
+);
+
+Users:
+CREATE TABLE `users` (
+ `id` int(11) NOT NULL AUTO_INCREMENT,
+ `name` varchar(255) NOT NULL,
+ `email` varchar(255) NOT NULL,
+ `password` varchar(255) NOT NULL,
+ `contact` varchar(255) NOT NULL,
+ `city` varchar(255) NOT NULL,
+ `address` varchar(255) NOT NULL,
+ PRIMARY KEY (`id`)
+) ;
+
+Users_items:
+CREATE TABLE `users_items` (
+ `id` int(11) NOT NULL AUTO_INCREMENT,
+ `user_id` int(11) NOT NULL,
+ `item_id` int(11) NOT NULL,
+ `status` enum('Added to cart','Confirmed') NOT NULL,
+ PRIMARY KEY (`id`),
+ KEY `item_id` (`item_id`),
+ KEY `user_id` (`user_id`),
+ CONSTRAINT `users_items_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`),
+ CONSTRAINT `users_items_ibfk_2` FOREIGN KEY (`item_id`) REFERENCES `items` (`id`)
+);
+
+
+
+INSERT INTO `items` (`id`, `name`, `price`) VALUES
+(1, 'Pantaloons', 999),
+(2, 'Max', 599),
+(3, 'Star Lath', 399),
+(4, 'AVACUB', 1099),
+(5, 'Child Sneakers', 359),
+(6, 'LIBERTY', 300),
+(7, 'PUMA', 800),
+(8, 'BILLION ', 1800),
+(9, 'HeadBand Baby Girl', 200),
+(10, 'Protection Set', 1009),
+(11, 'School Dress', 1500),
+(12, 'Watches For Kids', 399),
+(13, 'Western Dress', 1099),
+(14, 'Nykaa Fashion', 999),
+(15, 'Single Piece Dress', 1299),
+(16, 'Wedding Wear', 5999),
+(17, 'Maharastrian Wear', 3999),
+(18, 'Traditional', 3000),
+(19, 'Party Wear', 2000),
+(20, 'Plus Size Ethnic', 1999),
+(21, 'Banarasi Silk Saree', 2999),
+(22, 'For Garba Season', 3000),
+(23, 'Nykaa Fashion', 1500),
+(24, 'Indian Wear', 1300),
+(25, 'Tshirts H&M', 899),
+(26, 'EYEBOGLER(Blue, S)', 609),
+(27, 'Sports Tshirt', 499),
+(28, 'Cotton Plain', 700),
+(29, 'Roaster Blue Jeans', 3000),
+(30, 'Baggy Jeans For Men', 3000),
+(31, 'Men Formal Pnat', 1999),
+(32, '\r\nMACREW Formal Pant\r\n', 2000),
+(33, 'Wedding Suit', 1500),
+(34, 'Men Suits Rose Pink', 4999),
+(35, 'Mens Sherwani\r\n', 5999),
+(36, 'Manyavar Wedding', 4599),
+(37, 'Cannon EOS\r\n\r\n', 36000),
+(38, 'Kids Fashion', 700),
+(39, 'Couple Tshirts', 1090),
+(40, 'Olympus DSLR', 50000),
+(41, 'Titan Model #301', 13000),
+(42, 'Titan Model #201', 3000),
+(43, 'HMT Milan', 8000),
+(44, 'Faber Luba #111 ', 18000),
+(45, 'H&W ', 800),
+(46, 'Luis Phil', 1000),
+(47, 'John Zok', 1500),
+(48, 'Jhalsani', 1300);
+
