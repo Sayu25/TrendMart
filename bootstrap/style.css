@@ -1,0 +1,138 @@
+
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    padding-top:100px;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+}
+p{
+  font-family: sans-serif;
+  font-weight: normal;
+}
+
+#content{
+    min-height: 1000px;
+}
+
+#banner_image {
+    padding-bottom: 50px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #f8f8f8;
+    background: url(../img/banner_1.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+#banner_content {
+    position: relative;
+    padding-top: 6%;
+    padding-bottom: 6%;
+    margin-top: 12%;
+    margin-bottom: 12%;
+    background-color: rgba(0, 0, 0, 0.7);
+    max-width: 660px;
+}
+
+#container
+{
+    width:100%;
+    margin:auto;
+    overflow:hidden;
+}
+.items {
+    width:30%;
+    display: block;
+    padding: 4px;
+    margin-bottom: 20px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    float:left;
+    margin-left:1%;
+}
+.thumbnails
+{
+    display: block;
+    max-width: 100%;
+    height: 250px;
+
+}
+.caption{
+     color:#000;
+    padding:0px 10px 10px;
+    font-weight: bold;
+    text-align: center;
+    color: #0056b3;
+}
+
+/*This code ensures that when we navigate to a particular section of a page, the section does not get lost behind the header*/
+#Kids:before, #Female:before, #Male:before{
+    display: block;
+    content: " ";
+    margin-top: -85px;
+    height: 20px;
+    visibility: hidden;
+}
+
+
+#login-panel .panel-footer{
+    font-weight:normal;
+}
+
+footer {
+    padding: 10px 0;
+    background-color: #101010;
+    color:#9d9d9d;
+    bottom: 0;
+    width: 100%;
+}
+
+
+.red{
+    color:red;
+}
+
+#settings-container{
+    margin-bottom:10px;
+}
+
+.navbar-brand{
+    font-size:30px;
+}
+
+@media(min-width:768px) {
+    #banner_content {
+        padding-bottom: 15%;
+    }
+    footer{
+        text-align:left;
+    }
+}
+
+.remove_item_link{
+    color:#0000ff;
+}
+
+
+/* ABout page */
+
+
+.imageAboutPage {
+    width:100%;
+}
